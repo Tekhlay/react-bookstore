@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import { v4 as uuidv4 } from 'uuid';
 
 // Actions
@@ -8,7 +9,7 @@ const Removebook = 'bookstore/books/REMOVE_BOOK';
 const initialState = [
   {
     id: uuidv4(),
-    title: 'The sun',
+    title: 'The sun and flute',
     author: 'Shangay',
   },
   {
@@ -29,7 +30,7 @@ const booksReducer = (state = initialState, action) => {
     case Addbook:
       return [...state, action.payload];
     case Removebook:
-      return state.filter((book) => book.id !== action.payload);
+      return state.filter((book) => book.id !== action.payload.id);
     default:
       return state;
   }
@@ -38,12 +39,18 @@ const booksReducer = (state = initialState, action) => {
 // Action Creators
 const addBook = (book) => ({
   type: Addbook,
-  payload: book,
+  payload: {
+    id: uuidv4(),
+    title: book.title,
+    author: book.author,
+  },
 });
 
 const removeBook = (book) => ({
   type: Removebook,
-  payload: book,
+  payload: {
+    id: book.id,
+  },
 });
 
 // Export
