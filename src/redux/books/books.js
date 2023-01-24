@@ -1,6 +1,6 @@
 // Actions
-const Addbook = 'ADD_BOOK';
-const Removebook = 'REMOVE_BOOK';
+const Addbook = 'bookstore/books/ADD_BOOK';
+const Removebook = 'bookstore/books/REMOVE_BOOK';
 
 // intial State
 const initialState = [];
