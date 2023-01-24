@@ -1,14 +1,15 @@
-/* eslint-disable no-alert */
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { checkStatusAction } from '../redux/categories/categories';
 
 const Categories = () => {
-  const handleClick = () => {
-    alert('Page Under Construction');
-  };
-
+  const dispatch = useDispatch();
   return (
-    <div>
-      <button type="button" onClick={handleClick}>Check status</button>
+    <div className="categories">
+      <h1>Categories</h1>
+      <button type="button" onClick={() => dispatch(checkStatusAction())}>
+        Check Status
+      </button>
     </div>
   );
 };
