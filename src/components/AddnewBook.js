@@ -6,7 +6,6 @@ import { addBook } from '../redux/books/books';
 const AddnewBook = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
-
   const dispatch = useDispatch();
 
   const handleTitle = (e) => {

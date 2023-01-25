@@ -16,7 +16,7 @@ const Book = (props) => {
             <button type="button">Comments</button>
             <button
               type="button"
-              onClick={() => dispatch(removeBook(item))}
+              onClick={() => dispatch(removeBook(item.id))}
             >
               Remove
 
