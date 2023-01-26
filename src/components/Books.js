@@ -10,8 +10,7 @@ const Books = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getBooks());
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="book-container">

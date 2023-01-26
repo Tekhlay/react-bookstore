@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import { Outlet, Link } from 'react-router-dom';
 import { FaRegUser } from 'react-icons/fa';
 import '../index.css';
